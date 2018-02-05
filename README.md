@@ -16,6 +16,7 @@
 
 * [Data Driven Documents](https://d3js.org/)
 * [Github pages](https://pages.github.com/)
+* [Github API: Statistics](https://developer.github.com/v3/repos/statistics/)
 * [Javascript](https://www.javascript.com/)
 * [jQuery](https://jquery.com/)
 * [Ελληνική Στατιστική Αρχή](http://www.statistics.gr/)
