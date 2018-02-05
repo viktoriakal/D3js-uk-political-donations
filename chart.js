@@ -319,7 +319,7 @@ function mouseover(d, i) {
 
 
 	// image url that want to check
-	var imageFile = "https://raw.githubusercontent.com/Rakoon12/D3js-uk-political-donations/master/photos/" + donor + ".ico";
+	var imageFile = "https://raw.githubusercontent.com/ioniodi/D3js-uk-political-donations/master/photos/" + donor + ".ico";
 
 	
 	
