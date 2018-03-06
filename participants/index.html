@@ -152,51 +152,43 @@
   <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
   <!-- >>>>>>>>>>>>>>>>>>>>>>> Position #008 starting... >>>>>>>>>>>>>>>>>>>>>>> -->
   <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-   <div style="border: 2px solid; border-radius: 5px; background-color: #e5e5e5; width: fit-content; float: left; margin: 10px 10px 10px 10px;">
+    <div style="border: 2px solid; border-radius: 5px; background-color: #e5e5e5; width: fit-content; float: left; margin: 10px 10px 10px 10px;">
         
       <h4>
         <span>&nbsp;</span>
         <img src="https://avatars0.githubusercontent.com/u/22666247?s=40&v=4" height="42" width="42">  
-        <span class="ml9"><span class="letters">&nbsp;achkap&nbsp;</span></span>
+        <span class="ml13"><span class="letters">&nbsp;achkap&nbsp;</span></span>
       </h4>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
   </div>
  
     
   <script>
   // Wrap every letter in a span
-  $('.ml9 .letters').each(function(){
-    $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
-  });
-   
-   ml.timelines["ml9"] = anime.timeline({loop: true}) 
+$('.ml13').each(function(){
+  $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+});
+anime.timeline({loop: true})
   .add({
-    targets: '.ml9 .letter',
-    scale: [0.3,1],
-    opacity: [0,1],
+    targets: '.ml13 .letter',
+    translateY: [100,0],
     translateZ: 0,
+    opacity: [0,1],
     easing: "easeOutExpo",
-    duration: 1500,
-    elasticity: 600,
+    duration: 1400,
     delay: function(el, i) {
-      return 70 * (i+1)
+      return 300 + 30 * i;
     }
   }).add({
-    targets: '.ml9 .line',
-    scaleX: [0,1],
-    opacity: [0.5,1],
-    easing: "easeOutExpo",
-    duration: 700,
-    offset: '-=875',
-    delay: function(el, i, l) {
-      return 80 * (l - i);
+    targets: '.ml13 .letter',
+    translateY: [0,-100],
+    opacity: [1,0],
+    easing: "easeInExpo",
+    duration: 1200,
+    delay: function(el, i) {
+      return 100 + 30 * i;
     }
-  }).add({
-    targets: '.ml9',
-    opacity: 0,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 1000
-  });    
+  });
   </script>  
   </div>  
   <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
