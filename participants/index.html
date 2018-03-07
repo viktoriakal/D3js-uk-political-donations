@@ -68,37 +68,56 @@
   <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
   <!-- >>>>>>>>>>>>>>>>>>>>>>> Position #001 starting... >>>>>>>>>>>>>>>>>>>>>>> -->
   <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-  <div style="border: 2px solid; border-radius: 5px; background-color: #e5e5e5; width: fit-content; float: left; margin: 10px 10px 10px 10px;">
+ <div style="border: 2px solid; border-radius: 5px; background-color: #e5e5e5; width: fit-content; float: left; margin: 10px 10px 10px 10px;">
         
       <h4>
         <span>&nbsp;</span>
         <img src="https://avatars1.githubusercontent.com/u/25842896?sv=4" height="42" width="42">  
-        <span class="ml7"><span class="letters">&nbsp;P13chat&nbsp;</span></span>
+        <span class="ml0"><span class="letters">&nbsp;P13chat&nbsp;</span></span>
       </h4>
   
   <script>
 // Wrap every letter in a span
-$('.ml7 .letters').each(function(){
+$('.ml0 .letters').each(function(){
   $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
 });
-ml.timelines["ml7"] = anime.timeline({loop: true})
+ml.timelines["ml0"] = anime.timeline({loop: true})
   .add({
-    targets: '.ml7 .letter',
+    targets: '.ml0 .letter',
     translateY: ["1.2em", 0],
     translateZ: 0,
     duration: 750,
     delay: function(el, i) {
-      return 50 * i+;
+      return 50 * i;
     }
   }).add({
-    targets: '.ml7',
+    targets: '.ml0',
     opacity: 0,
     duration: 1000,
     easing: "easeOutExpo",
     delay: 1000
   });
 </script>
-</div> 
+<style>
+.ml0 {
+  position: relative;
+  font-weight: 900;
+  font-size: 0.95em;
+}
+.ml0 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+.ml0 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+</style>
+</div>
   <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
   <!-- <<<<<<<<<<<<<<<<<<<<<<< ...Position #001 ending <<<<<<<<<<<<<<<<<<<<<<< -->
   <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
